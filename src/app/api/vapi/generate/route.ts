@@ -14,7 +14,7 @@ export function GET() {
 }
 
 export async function POST(request: Request) {
-    const { userid, amount, techStack, type, role, level } = await request.json();
+    const { userid, amount, techstack:techStack, type, role, level } = await request.json();
     try {
         const { text: questions } = await generateText({
             model: google('gemini-2.0-flash-001'),
@@ -45,7 +45,7 @@ export async function POST(request: Request) {
             coverImage: getRandomInterviewCover()
         }
 
-        await db.collection('interviews').add(interview);
+         await db.collection('interviews').add(interview);
         return NextResponse.json({
             success: true,
         }, {
@@ -56,7 +56,7 @@ export async function POST(request: Request) {
         console.log(error)
         return NextResponse.json({
             success: false,
-            message: 'Error Occured.'
+            message: `Bala Occured ${error}`
         }, {
             status: 500
         })

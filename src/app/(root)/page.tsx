@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { dummyInterviews } from '../../constants'
 import InterviewCard from '../components/InterviewCard'
+import Link from 'next/link'
 
 const Page = () => {
   return (
@@ -15,9 +16,11 @@ const Page = () => {
         <p className='md:text-2xl'>
         Practice real interview questions & get instant feedback.
         </p>
+        <Link href={'/interview'}>
         <Button className={'btn text-xl max-md:w-full w-fit btn-primary '}>
          Start an Interview
         </Button>
+        </Link>
       </div>
       <div className='max-sm:hidden'>
         <Image src={'/robot.png'} className='object-cover pointer-events-none' width={400} height={400} alt={'robot'} />
