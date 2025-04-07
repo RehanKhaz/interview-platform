@@ -5,7 +5,7 @@ const Page = async() => {
     return (
         <>
         <h2 className=" my-10">Interview Generation</h2>
-       <Agent userName={user?.name} userId={user?.id} type={'generate'} />
+       <Agent userName={user?.name}  userId={user?.id} type={'generate'} />
         </>
     )
 

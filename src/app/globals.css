@@ -136,10 +136,10 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50 select-none;
+    @apply border-border  outline-ring/50 select-none;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background overflow-x-hidden text-foreground;
   }
   p {
     @apply text-light-100;
@@ -273,7 +273,7 @@
   }
 
   .tech-tooltip {
-    @apply absolute bottom-full mb-1 hidden group-hover:flex px-2 py-1 text-xs text-white bg-gray-700 rounded-md shadow-md;
+    @apply absolute bottom-full mb-1 hidden group-hover:flex px-2 py-1 text-xs capitalize text-white bg-gray-700 rounded-md shadow-md;
   }
 
   .card-interview {
